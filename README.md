@@ -20,7 +20,10 @@ To train the model,
 ```shell
 python main.py \
   --train
+  --num-istances [INT] \
+  --num-classes [INT] \
   --num-memories [INT] \
+  --addressing ['soft', 'sparse'] \
   --log-dir=$DIR
 ```
 

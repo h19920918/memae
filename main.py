@@ -22,9 +22,9 @@ def config():
     parser.add_argument('--dataset-dir', type=str, default='data/MNIST')
     parser.add_argument('--prepro-dir', type=str, default='prepro/MNIST')
 
-    parser.add_argument('--num-instances', type=int, default=10000)
-    parser.add_argument('--num-classes', type=int, default=10000)
-    parser.add_argument('--num-memories', type=int, default=10000)
+    parser.add_argument('--num-instances', type=int, default=60000)
+    parser.add_argument('--num-classes', type=int, default=60000)
+    parser.add_argument('--num-memories', type=int, default=100)
     parser.add_argument('--image-height', type=int, default=28)
     parser.add_argument('--image-width', type=int, default=28)
     parser.add_argument('--image-channel-size', type=int, default=1)
@@ -44,8 +44,8 @@ def config():
     parser.add_argument('--batch-size', type=int, default=32)
     parser.add_argument('--lr', type=float, default=1e-4)
     parser.add_argument('--weight-decay', type=float, default=1e-4)
-    parser.add_argument('--cls-loss-coef', type=float, default=1.0)
-    parser.add_argument('--entropy-loss-coef', type=float, default=0.2)
+    parser.add_argument('--cls-loss-coef', type=float, default=0.0)
+    parser.add_argument('--entropy-loss-coef', type=float, default=0.0002)
     parser.add_argument('--condi-loss-coef', type=float, default=0.0)
     parser.add_argument('--addressing', type=str, default='soft')
 
