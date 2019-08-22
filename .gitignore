@@ -1,0 +1,6 @@
+/prepro
+/data
+.pyc
+/logs
+/logs-test
+/__pycache__
