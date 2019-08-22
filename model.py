@@ -68,7 +68,7 @@ class ICVAE(nn.Module):
         elif self.addressing == 'sparse':
             mem_weight = (self.relu(mem_weight - self.threshold) * mem_weight) \
                             / (torch.abs(mem_weight - self.threshold) + self.epsilon)
-            mem_weight = mem_weight / (mem_weight.norm(p=1, dim=1) + self.epsilon) \
+            mem_weight = mem_weight / mem_weight.norm(p=1, dim=1) \
                             .unsqueeze(1).expand(batch, self.num_memories)
             z_hat = torch.mm(mem_weight, self.memory)
 
@@ -195,7 +195,6 @@ class Decoder(nn.Module):
         x = self.relu(x)
 
         x = self.deconv3(x)
-        # x = torch.tanh(x)
         return x
 
 
